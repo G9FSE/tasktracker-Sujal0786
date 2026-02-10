@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+
+    <!-- Add Task Form -->
+    <form id="taskForm" class="task-form">
+      <input type="text" id="title" placeholder="Add a new task..." required>
+      <select id="status">
+        <option value="not done">Not Done</option>
+        <option value="in progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button onclick="loadTasks()">All</button>
+      <button onclick="loadTasks('not done')">Not Done</button>
+      <button onclick="loadTasks('in progress')">In Progress</button>
+      <button onclick="loadTasks('done')">Done</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
